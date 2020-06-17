@@ -1,0 +1,250 @@
+/*#map {
+    height: 80%;
+    width: 100%;
+    position: absolute;
+}
+   /* Optional: Makes the sample page fill the window. */
+   :root {
+  --white: #afafaf;
+  --red: #e31b23;
+  --bodyColor: #292a2b;
+  --borderFormEls: hsl(0, 0%, 10%);
+  --bgFormEls: hsl(0, 0%, 14%);
+  --bgFormElsFocus: hsl(0, 7%, 20%);
+}
+      #map {
+        height: 90%;
+        position: absolute;
+         width: 100%;
+         
+      }
+
+       #remaningp {
+        height: 90%;
+        position: absolute;
+         width: 75%;
+         margin-right:-5%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+    
+      #floating-panel {
+        
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+      #right-panel {
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+       width:22%;
+       background-color: black;
+      }
+
+      #right-panel select, #right-panel input {
+        font-size: 15px;
+      }
+
+      #right-panel select {
+        width: 100%;
+      }
+
+      #right-panel i {
+        font-size: 12px;
+      }
+      #right-panel {
+        height: 100%;
+        float: right;
+        
+        overflow: auto;
+      }
+      #map {
+        margin-right: 400px;
+      }
+      #floating-panel {
+        background: #fff;
+        padding: 5px;
+        font-size: 14px;
+        font-family: Arial;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+        display: none;
+      }
+      @media print {
+        #map {
+          height: 500px;
+          margin: 0;
+        }
+        #right-panel {
+          float: none;
+          width: auto;
+        }
+      }
+   
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #description {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+      }
+
+      #infowindow-content .title {
+        font-weight: bold;
+      }
+
+      #infowindow-content {
+        display: none;
+      }
+
+      #map #infowindow-content {
+        display: inline;
+      }
+
+      .pac-card {
+       
+      }
+
+      #pac-container {
+        padding-bottom: 12px;
+        margin-right: 12px;
+      }
+
+      .pac-controls {
+        display: inline-block;
+        padding: 5px 11px;
+      }
+
+      .pac-controls label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+
+      #pac-inputt {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        
+      }
+
+      #pac-inputt:focus {
+        border-color: #4d90fe;
+      }
+       #pac-inputp {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+       
+      }
+
+      #pac-inputp:focus {
+        border-color: #4d90fe;
+      }
+
+      #title {
+        color: #fff;
+        background-color: #4d90fe;
+        font-size: 25px;
+        font-weight: 500;
+        padding: 6px 12px;
+      }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+ 
+a {
+  color: inherit;
+}
+ 
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+  font-size: 100%; 
+}
+ 
+button,
+label {
+  cursor: pointer;
+}
+ 
+select {
+  appearance: none;
+}
+ 
+select::-ms-expand {
+  display: none;
+}
+ 
+select:-moz-focusring {
+  color: transparent !important;
+  text-shadow: 0 0 0 var(--white);
+}
+ 
+textarea {
+  resize: none;
+}
+ 
+ul {
+  list-style: none;
+}
+.button5 {border-radius: 50%;}
+.btn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn:disabled {
+  background:
+grey;}
+/* Blue */
+.info {
+    border-color: #2196F3;
+    color: dodgerblue
+}
+
+.info:hover {
+    background: #2196F3;
+    color: white;
+}
+.info:disabled {
+    border-color: grey;
+     color: white;
+}
+
+.info:hover:disabled  {
+    background: grey;
+     color: white;
+}
+.ButtonState{display:none}
+.Button{padding:3px; margin:4px; background:#CCC; border:1px solid #333; cursor:pointer;}
+.ButtonState:checked + .Button{background:#4CAF50;}
+.ButtonState:checked:disabled + .Button{background:grey;}
+.ButtonState:not(:checked):disabled + .Button{background:grey;}

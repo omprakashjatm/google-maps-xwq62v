@@ -1,0 +1,111 @@
+<style>
+.split{
+  height:100%;
+  width:78%;
+  position:fixed;
+  z-index:1;
+  top:7%;
+  overflow-x:hidden;
+  padding-top:20px;
+ 
+}
+.left{
+  left:0;
+}
+.right{
+  right:0;
+  width:22%;
+   padding-left:30px;
+  background-color: black;
+   font-size:20px;
+}
+</style>
+<div style="background-color:black;color:white;margin-top:-1%;margin-left:-9px;width:110%">
+<h1 style="padding-top: 2%;padding-left: 1%;margin-left:35%;">Covid-19: Route Planning</h1>
+<br/>
+<div class="split left">
+  <div #mapDiv id="map"></div>
+</div>
+<div class="split right">
+   <form name="searchRouteForm">
+    <table>
+  <tbody>
+    <tr>
+      <td><!--<input type='file' accept=".kml,.kmz" (change)='fileChanged($event)'>-->
+</td>
+       <td>  <input type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Enter Origin Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" style="width: 400px;" required #origin>
+
+</td>
+      </tr>
+    <tr></tr>
+    <tr></tr>
+
+    <tr></tr>
+
+    <tr></tr>
+
+       <tr>
+       
+      <td></td>
+      <td>  <input type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Enter Destination Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" style="width: 400px;" required  #dest>
+
+</td>
+      </tr>
+      <tr></tr>
+      <tr></tr>
+      <tr></tr>
+      <tr></tr>
+      <tr><td></td><td><button style="margin-left:35%"class="btn info" [disabled]="check()" (click)="searchRoutes()">Search</button></td></tr>
+ <tr></tr>
+      <tr></tr>
+      <tr></tr>
+      <tr></tr>
+       <tr></tr>
+      <tr></tr>
+      <tr> 
+       </tr>
+  </tbody>
+    </table>
+   </form>
+   <br/>
+   <br/>
+   
+  <div style="margin-left:20%;">
+        <input type="radio" name="Button"  [disabled]="check1()" class="ButtonState" checked id="Button1" (click)="showParticularRoute(0)" value="1"/>
+        <label class="Button" for="Button1">Route 1</label>
+        <input  [disabled]="check1()" type="radio" name="Button" class="ButtonState" id="Button2" (click)="showParticularRoute(1)" value="2"/>
+        <label class="Button" for="Button2">Route 2</label>
+        <input  [disabled]="check1()" type="radio" name="Button" class="ButtonState" id="Button3" (click)="showParticularRoute(2)" value="3"/>
+        <label class="Button" for="Button3">Route 3</label>
+</div>
+ <br/>
+   <br/>
+   
+<div style="margin-left:2%;" *ngIf="routingflag">
+  <h3 style="margin-left:25%">Wards Along Route</h3>
+   <br/>
+  <table>
+    <thead>
+      <tr>Wards with active cases:{{covidactive}}</tr>
+      <tr>Total active cases in wards crossed:{{covidfree}}</tr>
+        <tr>Distance:{{totdistance}}</tr>
+          <tr>Total Travel Time:{{tottime}}</tr>
+    </thead>
+
+  </table>
+  </div>
+</div>
+
+
+      
+    
+
+   
+  
+    
+   
+   <!--  <div id="infowindow-content">
+      <img src="" width="16" height="16" id="place-icon">
+      <span id="place-name"  class="title"></span><br>
+      <span id="place-address"></span>
+    </div>-->
